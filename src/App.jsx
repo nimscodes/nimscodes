@@ -1,10 +1,22 @@
+import { useState } from "react";
+import useDarkMode from "./hooks/use-dark-mode";
+import Header from "./components/Header";
+
 function App() {
 
+  const [colorTheme, setTheme] = useDarkMode();
+  const [darkMode, setDarkMode] = useState(
+    colorTheme === 'light' ? true : false
+  );
+  const onToggleMode = (mode) => {
+    setTheme(colorTheme);
+    setDarkMode(!mode)
+  }
+
   return (
-    <div className="p-5">
-     <h1 className="font-bold text-3xl text-gun-metal font-pacifico">
-      nims<span className="text-gold-metallic">codes</span>
-      </h1>
+    <div className="min-h-screen mx-auto p-3 bg-gray-100 dark:bg-gun-metal text-gun-metal dark:text-gray-100">
+      <Header darkMode={darkMode} onToggleMode={onToggleMode} />
+    
     </div>
   )
 }
