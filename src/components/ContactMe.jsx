@@ -1,0 +1,17 @@
+import {  MdOutlineMailOutline  } from 'react-icons/md'
+
+const ContactMe = () => {
+  return (
+    <div className="flex items-center">
+    <a
+      href="#home"
+      className="bg-gold-metallic font-semibold px-4 py-2 shadow-xl mx-1 text-black flex items-center justify-center gap-1 cursor-pointer"
+    >
+      <span className="text-sm">Contact Me!</span>
+      <MdOutlineMailOutline size={20} />
+    </a>
+  </div>
+  )
+}
+
+export default ContactMe
