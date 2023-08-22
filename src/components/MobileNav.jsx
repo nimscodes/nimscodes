@@ -16,7 +16,7 @@ const MobileNav = () => {
   return (
     <div className={`relative ${isMenuOpen && ''}`}>
       <button
-        className="fixed z-50 top-6 right-4 focus:outline-none"
+        className="fixed z-50 top-5 right-2 focus:outline-none"
         onClick={toggleMenu}
       >
         {isMenuOpen ? <IoClose size={25} /> : <HiMenuAlt3 size={25} />}
@@ -26,7 +26,7 @@ const MobileNav = () => {
       <div
         className={
           isMenuOpen
-            ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70'
+            ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/50'
             : ''
         }
       >
@@ -35,7 +35,7 @@ const MobileNav = () => {
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="mt-[80px]">
+          <div className="mt-[80px] sm:w-3/4 mx-auto">
             <ul className="flex flex-col gap-6">
               <li>
                 <a
