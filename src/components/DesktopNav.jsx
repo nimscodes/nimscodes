@@ -4,7 +4,7 @@ import { MdOutlineWorkOutline, MdOutlineMailOutline } from 'react-icons/md';
 
 const DesktopNav = () => {
   return (
-    <div className="flex items-center shadow-lg px-5 py-2">
+    <div className="flex items-center shadow-inner px-5 py-2">
       <ul className="flex gap-8 ">
         <li>
           <a href="#home" className="flex flex-col items-center cursor-pointer p-1">
