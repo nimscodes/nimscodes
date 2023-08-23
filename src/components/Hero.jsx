@@ -8,7 +8,7 @@ const Hero = ({ isMobile }) => {
     <div className="flex flex-col md:flex-row py-10 md:py-0 justify-between mt-10 md:mt-0">
       <LeftHero />
       <div className="flex items-center justify-center md:w-[48%] shadow-inner h-auto border-b border-gold-metallic">
-        <div className='relative'>
+        <div className='relative z-0'>
           <div className='absolute w-40 h-40 transform rotate-45 shadow-inner top-[20%] '></div>
           <div className='absolute w-40 h-40 transform rotate-45 shadow-xl top-[35%]'></div>
           <div className='absolute w-40 h-40 transform rotate-45 shadow-inner top-[55%]'></div>
