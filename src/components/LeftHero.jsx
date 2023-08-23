@@ -8,7 +8,7 @@ const LeftHero = () => {
       <span className="text-xs md:text-md text-gray-500">
         — MY NAME IS
       </span>
-      <span className="font-semibold text-4xl md:text-6xl">
+      <span className="font-semibold text-3xl md:text-4xl">
         Prince Andrews <span className="text-gold-metallic">Nimako</span>
       </span>
       <span className="font-pacifico text-3xl md:text-4xl text-gray-500">

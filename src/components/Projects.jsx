@@ -20,7 +20,7 @@ const Projects = () => {
           rel="noreferrer"
           className="flex items-center gap-2"
         >
-          <span className="font-pacifico">View more</span>
+          <span className="font-pacifico text-gray-500">View more</span>
           <HiOutlineExternalLink className="text-tea-rose-red size" size={20} />
         </a>
       </div>
