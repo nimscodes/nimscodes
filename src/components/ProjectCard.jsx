@@ -16,7 +16,7 @@ const ProjectCard = ({ data }) => {
       <img
         src={data.image}
         alt="image"
-        className="w-full h-full transform hover:scale-120 transition-transform duration-300 cursor-pointer"
+        className="w-full h-full transform hover:scale-[120%] transition-transform duration-300 cursor-pointer"
       />
       <div className="w-full p-2 absolute bottom-0 flex justify-between text-gray-200 bg-black/60 ">
         <div className="flex flex-col gap-3">
