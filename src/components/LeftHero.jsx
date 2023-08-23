@@ -5,8 +5,8 @@ const LeftHero = () => {
   return (
     <div className=" relative md:w-[48%] flex flex-col justify-end gap-[30px] md:gap-4 mb-5">
       <div className='absolute w-60 h-60 transform rotate-45 shadow-2xl md:top-[75%] md:left-[40%] top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 '></div>
-      <span className="text-xs md:text-md text-gray-400 dark:text-gray-600">
-        —— MY NAME IS
+      <span className="text-xs md:text-md text-gray-500">
+        — MY NAME IS
       </span>
       <span className="font-semibold text-4xl md:text-6xl">
         Prince <span className="text-gold-metallic">Nimako</span>
