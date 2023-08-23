@@ -3,7 +3,7 @@ import { DiJavascript1 } from 'react-icons/di'
 
 const Skills = () => {
   return (
-    <div className='text-tea-rose-red w-full flex flex-row flex-wrap items-center p-5 md:p-[50px] justify-between'>
+    <div className='my-[50px] text-tea-rose-red w-full flex flex-row flex-wrap items-center p-5 md:p-[50px] justify-between'>
       <div className="relative flex items-center justify-center p-4 ">
         <div className="absolute inset-0 transform rotate-45 shadow-inner"></div>
         <FaHtml5 size={50} />

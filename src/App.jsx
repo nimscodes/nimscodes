@@ -3,6 +3,7 @@ import useDarkMode from './hooks/use-dark-mode';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -37,6 +38,7 @@ function App() {
         />
         <Hero isMobile={isMobile} />
         <Skills />
+        <Projects />
       </div>
     </div>
   );
