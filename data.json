@@ -4,7 +4,7 @@
     "name": "Rest Countries App",
     "live": "https://countries-app-flax-chi.vercel.app/",
     "github": "https://github.com/nimscodes/countries-app",
-    "image": "./src/assets/rest-countries.png",
+    "image": "./images/rest-countries.png",
     "tags": ["react", "tailwind", "filter", "search", "pagination", "darkmode", "restapis"]
   },
   {
@@ -12,7 +12,7 @@
     "name": "Todo App",
     "live": "https://nimscodes.github.io/todo-main/",
     "github": "https://github.com/nimscodes/todo-main",
-    "image": "./src/assets/todo-app.png",
+    "image": "./images/todo-app.png",
     "tags":["react", "tailwind", "darkmode", "drag-and-drop", "search", "filter"]
   },
   {
@@ -20,7 +20,7 @@
     "name": "Job Listings App",
     "live": "https://job-lisiting-app.vercel.app/",
     "github": "https://github.com/nimscodes/job-lisiting-app",
-    "image": "./src/assets/job-listing-app.png",
+    "image": "./images/job-listing-app.png",
     "tags": ["react", "tailwind", "filter", "json"]
   },
   {
@@ -28,7 +28,7 @@
     "name": "Navigation Dropdown",
     "live": "https://navigation-dropdown.vercel.app/",
     "github": "https://github.com/nimscodes/navigation-dropdown",
-    "image": "./src/assets/navigation-dropdwon.png",
+    "image": "./images/navigation-dropdwon.png",
     "tags": ["react", "navigation", "tailwind", "dropdown"]
   }
   
