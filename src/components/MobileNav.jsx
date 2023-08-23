@@ -14,7 +14,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div className={`relative ${isMenuOpen && ''}`}>
+    <div className={`relative z-40`}>
       <button
         className="fixed z-50 top-5 right-2 focus:outline-none"
         onClick={toggleMenu}
@@ -31,7 +31,7 @@ const MobileNav = () => {
         }
       >
         <div
-          className={`fixed z-40 top-0 right-0 h-full w-4/5 p-5  bg-gray-100 text-black dark:bg-gun-metal dark:text-white transform transition-transform ${
+          className={`fixed z-1000 top-0 right-0 h-full w-4/5 p-5  bg-gray-100 text-black dark:bg-gun-metal dark:text-white transform transition-transform ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
