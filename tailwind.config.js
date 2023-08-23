@@ -15,7 +15,8 @@ export default {
         'tea-rose-red': '#DDAFB3',
       },
       fontFamily: {
-        'pacifico': ['Pacifico', 'cursive']
+        'pacifico': ['Pacifico', 'cursive'],
+        josefin: ["Josefin Sans", "sans-serif"]
       }
     },
   },
