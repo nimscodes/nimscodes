@@ -3,8 +3,8 @@ import Download from './Download';
 
 const LeftHero = () => {
   return (
-    <div className=" relative md:w-[48%] flex flex-col justify-end gap-3 mb-5">
-      <div className='absolute w-60 h-60 transform rotate-45 shadow-2xl top-[50%] left-[10%] '></div>
+    <div className=" relative md:w-[48%] flex flex-col justify-end gap-[30px] md:gap-4 mb-5">
+      <div className='absolute w-60 h-60 transform rotate-45 shadow-2xl md:top-[75%] md:left-[40%] top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 '></div>
       <span className="text-xs md:text-md text-gray-400 dark:text-gray-600">
         —— MY NAME IS
       </span>
@@ -18,7 +18,7 @@ const LeftHero = () => {
         Based in the UK, I am a front-end developer passionate about building
         accessible web apps that users love.
       </p>
-      <div className="flex flex-col md:flex-row mt-8 gap-4">
+      <div className="flex flex-col md:flex-row mt-[30px] gap-4">
         <ContactMe />
         <Download />
       </div>
