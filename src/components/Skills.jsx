@@ -10,7 +10,7 @@ const Skills = () => {
       </div>
 
       <div className="relative flex items-center justify-center p-4">
-      <div className="absolute inset-0 transform rotate-45 shadow-md"></div>
+      <div className="absolute inset-0 transform rotate-45 shadow-lg"></div>
         <FaCss3Alt size={50} />
       </div>
       <div className="relative flex items-center justify-center p-4">
@@ -18,7 +18,7 @@ const Skills = () => {
         <DiJavascript1 size={50} />
       </div>
       <div className="relative flex items-center justify-center p-4 ">
-      <div className="absolute inset-0 transform rotate-45 shadow-md"></div>
+      <div className="absolute inset-0 transform rotate-45 shadow-lg"></div>
         <FaReact size={50} />
       </div>
       <div className="relative flex items-center justify-center  p-4">

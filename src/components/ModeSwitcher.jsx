@@ -4,7 +4,7 @@ const ModeSwitcher = ({ darkMode, onToggleMode }) => {
   return (
     <div onClick={() => onToggleMode(darkMode)} className='md:order-1 cursor-pointer flex items-center justify-center'>
       {
-        darkMode ? <IoMoonOutline size={20} /> : <IoSunnyOutline size={20} />
+        darkMode ? <IoMoonOutline size={25} /> : <IoSunnyOutline size={30} />
       } 
     </div>
   )

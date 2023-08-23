@@ -30,8 +30,10 @@ function App() {
 
   return (
     <div className="font-josefin min-h-screen p-5 md:py-0 bg-gray-100 dark:bg-gun-metal text-gun-metal dark:text-gray-100">
-      <div className='sm:w-[90%] mx-auto'>
+      <div className='relative sm:w-[90%] mx-auto'>
         <Header
+        cclas
+        
           darkMode={darkMode}
           onToggleMode={onToggleMode}
           isMobile={isMobile}
