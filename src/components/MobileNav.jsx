@@ -16,10 +16,10 @@ const MobileNav = () => {
   return (
     <div className={`relative z-40`}>
       <button
-        className="fixed z-50 top-5 right-2 focus:outline-none"
+        className="fixed z-50 top-6 right-5 focus:outline-none text-3xl"
         onClick={toggleMenu}
       >
-        {isMenuOpen ? <IoClose size={25} /> : <HiMenuAlt3 size={25} />}
+        {isMenuOpen ? <IoClose /> : <HiMenuAlt3 />}
       </button>
 
       {/* Naviation Menu */}
