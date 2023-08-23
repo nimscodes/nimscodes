@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import useDarkMode from './hooks/use-dark-mode';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Skills from './components/Skills';
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -35,6 +36,7 @@ function App() {
           isMobile={isMobile}
         />
         <Hero isMobile={isMobile} />
+        <Skills />
       </div>
     </div>
   );
