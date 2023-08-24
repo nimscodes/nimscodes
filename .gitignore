@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 # environment variables
-.env.production
-.env.development
+.env
