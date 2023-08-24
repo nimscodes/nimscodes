@@ -3,8 +3,10 @@ import { HiMenuAlt3 } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
 import { HiOutlineHome } from 'react-icons/hi';
 import { BsPerson } from 'react-icons/bs';
-import { MdOutlineWorkOutline, MdOutlineMailOutline } from 'react-icons/md';
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { MdOutlineWorkOutline } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import ContactMe from './ContactMe';
+import SocialIcons from './SocialIcons';
 
 const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +14,38 @@ const MobileNav = () => {
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  const handleClick = () => {
+    setIsMenuOpen(false)
+  }
+  const links = [
+    {
+      label: 'Home',
+      path: '/',
+      icon: <HiOutlineHome size={25} className="text-tea-rose-red" />,
+    },
+    {
+      label: 'About',
+      path: '/about',
+      icon: <BsPerson size={25} className="text-tea-rose-red" />,
+    },
+    {
+      label: 'Work',
+      path: '/work',
+      icon: <MdOutlineWorkOutline size={25} className="text-tea-rose-red" />,
+    },
+  ];
+
+  const renderedLinks = links.map((link) => {
+    return (
+      <li key={link.label}>
+        <Link to={link.path} onClick={handleClick} className="flex items-center gap-3 cursor-pointer">
+          {link.icon}
+          <span className="text-sm">{link.label}</span>
+        </Link>
+      </li>
+    );
+  });
 
   return (
     <div className={`relative z-40`}>
@@ -36,60 +70,10 @@ const MobileNav = () => {
           }`}
         >
           <div className="mt-[80px] sm:w-3/4 mx-auto">
-            <ul className="flex flex-col gap-6">
-              <li>
-                <a
-                  href="#home"
-                  className="flex items-center gap-3 cursor-pointer"
-                >
-                  <HiOutlineHome size={25} className="text-tea-rose-red" />
-                  <span className="text-sm">Home</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="flex items-center gap-3 cursor-pointer"
-                >
-                  <BsPerson size={25} className="text-tea-rose-red" />
-                  <span className="text-sm">About</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#work"
-                  className="flex items-center  gap-3 cursor-pointer"
-                >
-                  <MdOutlineWorkOutline
-                    size={25}
-                    className="text-tea-rose-red"
-                  />
-                  <span className="text-sm">Work</span>
-                </a>
-              </li>
-            </ul>
+            <ul className="flex flex-col gap-6">{renderedLinks}</ul>
             <div className="flex flex-col gap-10 mt-[70px]">
-              <a
-                href="#home"
-                className="bg-gold-metallic font-semibold p-2 mx-1 text-black flex items-center justify-center gap-1 cursor-pointer"
-              >
-                <span className="text-sm">Contact Me!</span>
-                <MdOutlineMailOutline size={20} />
-              </a>
-              <div className="flex justify-between items-center text-2xl mx-2 text-gray-400">
-                <a href="https://github.com/nimscodes" target="_blank" rel="noopener noreferrer">
-                  <FaGithub />
-                </a>
-                <a href="https://www.linkedin.com/in/panimako/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin />
-                </a>
-                <a href="https://www.instagram.com/nims_prince/" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram />
-                </a>
-                <a href="https://twitter.com/hexaboy07" target="_blank" rel="noopener noreferrer">
-                  <FaTwitter />
-                </a>
-              </div>
+              <ContactMe onClick={handleClick} />
+              <SocialIcons />
             </div>
           </div>
         </div>

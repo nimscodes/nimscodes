@@ -1,5 +1,5 @@
 import Logo from './Logo';
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa';
+import SocialIcons from './SocialIcons';
 
 const Footer = () => {
   return (
@@ -11,36 +11,7 @@ const Footer = () => {
             Frontend Web Developer and Aspiring Full Stack Developer
           </p>
         </div>
-        <div className="text-gray-400 flex text-2xl gap-10 md:self-end py-2">
-          <a
-            href="https://github.com/nimscodes"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/panimako/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://www.instagram.com/nims_prince/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://twitter.com/hexaboy07"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-        </div>
+        <SocialIcons />
       </div>
       <div className="flex justify-center mt-10 text-sm">
         ©Copyright 2023. made by @nimscodes
