@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import useDarkMode from './hooks/use-dark-mode';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
+import ProjectsPage from './components/ProjectsPage';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [colorTheme, setTheme] = useDarkMode();
   const [darkMode, setDarkMode] = useState(
@@ -31,21 +31,24 @@ function App() {
   });
 
   return (
-    <div className="font-josefin min-h-screen p-5 md:py-0 bg-gray-100 dark:bg-gun-metal text-gun-metal dark:text-gray-100">
-      <div className='relative sm:w-[90%] mx-auto space-y-20'>
-        <Header
-          darkMode={darkMode}
-          onToggleMode={onToggleMode}
-          isMobile={isMobile}
-        />
-        <Hero isMobile={isMobile} />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
+    <Router>
+      <div className="font-josefin min-h-screen p-5 md:py-0 bg-gray-100 dark:bg-gun-metal text-gun-metal dark:text-gray-100">
+        <div className="relative sm:w-[90%] h-full mx-auto space-y-20">
+          <Header
+            darkMode={darkMode}
+            onToggleMode={onToggleMode}
+            isMobile={isMobile}
+          />
+          <Routes>
+            <Route exact path="/" element={<HomePage isMobile={isMobile} />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/work" element={<ProjectsPage />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;
