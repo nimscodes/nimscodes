@@ -8,7 +8,7 @@ const Projects = () => {
   });
 
   return (
-    <div className="flex flex-col gap-10 py-10">
+    <div id='work' className="flex flex-col gap-10 py-10">
       <div className="flex flex-row items-start justify-between">
         <div className="flex flex-col space-y-3">
           <h3 className="text-xs text-gray-500 py-2">— LATEST WORK</h3>
