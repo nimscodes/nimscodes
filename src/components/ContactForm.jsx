@@ -61,6 +61,7 @@ const ContactForm = () => {
     } catch (error) {
       console.error('Error sending message:', error);
     }
+    
 
     setFormData({
       name: '',
@@ -82,7 +83,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleInputChange}
           placeholder={errors.name || `Enter your name...`}
-          className={`w-full bg-transparent outline-none ${
+          className={`w-full bg-transparent outline-none border-none${
             errors.name && ' placeholder:text-red-400'
           }`}
         />
@@ -94,7 +95,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleInputChange}
           placeholder={errors.email || `Enter your email...`}
-          className={`w-full bg-transparent outline-none ${
+          className={`w-full bg-transparent border-none outline-none ${
             errors.email && ' placeholder:text-red-400'
           }`}
         />
@@ -106,7 +107,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleInputChange}
           placeholder={errors.message || `Type your message...`}
-          className={`w-full bg-transparent outline-none ${
+          className={`w-full bg-transparent outline-none border-none ${
             errors.message && ' placeholder:text-red-400'
           }`}
         />

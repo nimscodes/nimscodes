@@ -7,20 +7,20 @@ const DesktopNav = () => {
     <div className="flex items-center shadow-inner px-5 py-2">
       <ul className="flex gap-8 ">
         <li>
-          <a href="#home" className="flex flex-col items-center cursor-pointer p-1">
-            <HiOutlineHome size={40} className="" />
+          <a href="#home" className="flex flex-col items-center cursor-pointer p-1 hover:border-b-2">
+            <HiOutlineHome size={40} className="text-gray-400" />
             <span className="text-xs">Home</span>
           </a>
         </li>
         <li>
-          <a href="#about" className="flex flex-col items-center p-1 cursor-pointer">
-            <BsPerson size={40} className="font-bold" />
+          <a href="#about" className="flex flex-col items-center p-1 cursor-pointer hover:border-b-2">
+            <BsPerson size={40} className="font-bold text-gray-400" />
             <span className="text-xs">About</span>
           </a>
         </li>
         <li>
-          <a href="#work" className="flex flex-col items-center p-1 cursor-pointer">
-            <MdOutlineWorkOutline size={40} className="" />
+          <a href="#work" className="flex flex-col items-center p-1 cursor-pointer hover:border-b-2">
+            <MdOutlineWorkOutline size={40} className=" text-gray-400" />
             <span className="text-xs">Work</span>
           </a>
         </li>

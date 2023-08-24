@@ -4,7 +4,7 @@ import { SiTailwindcss } from 'react-icons/si';
 
 const Skills = () => {
   return (
-    <div className="shadow-inner w-full flex flex-row flex-wrap items-center py-3 md:p-[50px] justify-between">
+    <div className="text-gray-400 w-full flex flex-row flex-wrap items-center p-4 md:p-[50px] justify-between border-t border-gray-200 dark:border-gray-700">
       <div className="relative flex items-center justify-center p-4 cursor-pointer">
         <div className="absolute inset-0 transform rotate-45 shadow-inner"></div>
         <FaHtml5 size={40} />

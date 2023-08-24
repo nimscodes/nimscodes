@@ -4,7 +4,7 @@ import { IoClose } from 'react-icons/io5';
 import { HiOutlineHome } from 'react-icons/hi';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineWorkOutline, MdOutlineMailOutline } from 'react-icons/md';
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,21 +67,28 @@ const MobileNav = () => {
                   <span className="text-sm">Work</span>
                 </a>
               </li>
-              
             </ul>
-            <div className="flex flex-col gap-5 mt-[70px]">
+            <div className="flex flex-col gap-10 mt-[70px]">
               <a
                 href="#home"
                 className="bg-gold-metallic font-semibold p-2 mx-1 text-black flex items-center justify-center gap-1 cursor-pointer"
               >
                 <span className="text-sm">Contact Me!</span>
-                <MdOutlineMailOutline size={20}  />
+                <MdOutlineMailOutline size={20} />
               </a>
-              <div className='flex justify-between items-center text-2xl mx-2'>
-                <FaGithub/>
-                <FaLinkedin />
-                <FaInstagram />
-                <FaTwitter /> 
+              <div className="flex justify-between items-center text-2xl mx-2 text-gray-400">
+                <a href="https://github.com/nimscodes" target="_blank" rel="noopener noreferrer">
+                  <FaGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/panimako/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin />
+                </a>
+                <a href="https://www.instagram.com/nims_prince/" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram />
+                </a>
+                <a href="https://twitter.com/hexaboy07" target="_blank" rel="noopener noreferrer">
+                  <FaTwitter />
+                </a>
               </div>
             </div>
           </div>
