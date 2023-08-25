@@ -1,8 +1,9 @@
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlineExternalLink } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 const ProjectCard = ({ data }) => {
+
   const renderedTags = data.tags.map((tag, index) => {
     return (
       <span className="mr-2 text-sm" key={index}>
@@ -13,7 +14,9 @@ const ProjectCard = ({ data }) => {
   });
 
   return (
-    <div className="w-full md:w-[350px] h-[270px] group relative flex flex-col shadow-2xl overflow-hidden"
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="w-full md:w-[350px] h-[270px] group relative flex flex-col shadow-2xl overflow-hidden"
     >
       <img
         src={data.image}
@@ -34,7 +37,7 @@ const ProjectCard = ({ data }) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,9 +1,10 @@
-
+import Projects from "./Projects";
 
 const ProjectsPage = () => {
-  return (
-    <div>ProjectsPage</div>
-  )
-}
 
-export default ProjectsPage
+  return (
+   <Projects />
+  );
+};
+
+export default ProjectsPage;
