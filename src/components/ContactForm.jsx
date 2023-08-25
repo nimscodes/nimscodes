@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BsSendCheck } from 'react-icons/bs';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +62,6 @@ const ContactForm = () => {
     } catch (error) {
       console.error('Error sending message:', error);
     }
-    
 
     setFormData({
       name: '',
@@ -112,7 +112,11 @@ const ContactForm = () => {
           }`}
         />
       </div>
-      <div className="cursor-pointer flex items-center gap-1 self-end px-5 py-2 shadow-md border dark:border-gray-700">
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+        className="cursor-pointer flex items-center gap-1 self-end px-5 py-2 shadow-md border dark:border-gray-700"
+      >
         <input
           type="submit"
           name="send"
@@ -120,7 +124,7 @@ const ContactForm = () => {
           className="w-full bg-transparent outline-none font-semibold"
         />
         <BsSendCheck size={25} className="text-tea-rose-red" />
-      </div>
+      </motion.div>
       {success && <p className="text-[#5cb85c]"> {success}</p>}
     </form>
   );

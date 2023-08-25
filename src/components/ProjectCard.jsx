@@ -1,5 +1,6 @@
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlineExternalLink } from 'react-icons/hi';
+import { motion } from 'framer-motion';
 
 const ProjectCard = ({ data }) => {
   const renderedTags = data.tags.map((tag, index) => {
@@ -12,7 +13,8 @@ const ProjectCard = ({ data }) => {
   });
 
   return (
-    <div className="w-full md:w-[350px] h-[270px] group relative flex flex-col shadow-2xl overflow-hidden">
+    <div className="w-full md:w-[350px] h-[270px] group relative flex flex-col shadow-2xl overflow-hidden"
+    >
       <img
         src={data.image}
         alt="image"
