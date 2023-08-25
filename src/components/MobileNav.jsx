@@ -7,9 +7,11 @@ import { MdOutlineWorkOutline } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import ContactMe from './ContactMe';
 import SocialIcons from './SocialIcons';
+import { motion } from 'framer-motion'
 
 const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -48,7 +50,7 @@ const MobileNav = () => {
   });
 
   return (
-    <div className={`relative z-40`}>
+    <motion.div className={`relative z-40`}>
       <button
         className="fixed z-50 top-6 right-5 focus:outline-none text-3xl"
         onClick={toggleMenu}
@@ -65,7 +67,7 @@ const MobileNav = () => {
         }
       >
         <div
-          className={`fixed z-1000 top-0 right-0 h-full w-4/5 p-5  bg-gray-100 text-black dark:bg-gun-metal dark:text-white transform transition-transform ${
+          className={`fixed z-1000 top-0 right-0 h-full w-4/5 p-5  bg-gray-100 text-black dark:bg-gun-metal dark:text-white transform transition-transform duration-500 ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -78,7 +80,7 @@ const MobileNav = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
