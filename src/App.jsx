@@ -33,13 +33,13 @@ const App = () => {
   return (
     <Router>
       <div className="font-josefin min-h-screen p-5 md:py-0 bg-gray-100 dark:bg-gun-metal text-gun-metal dark:text-gray-100">
-        <div className="relative sm:w-[90%] h-full mx-auto space-y-20">
+        <div className="sm:w-[90%] h-full mx-auto space-y-20">
           <Header
             darkMode={darkMode}
             onToggleMode={onToggleMode}
             isMobile={isMobile}
           />
-          <Routes>
+          <Routes className="flex-grow">
             <Route exact path="/" element={<HomePage isMobile={isMobile} />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/work" element={<ProjectsPage />} />
