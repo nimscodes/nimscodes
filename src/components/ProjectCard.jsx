@@ -16,14 +16,17 @@ const ProjectCard = ({ data }) => {
   });
 
   return (
-    <motion.div
+    <motion.a
+      href={live}
+      target='_blank'
+      rel='noreferrer'
       whileHover={{ scale: 1.05 }}
-      className="w-full md:w-[350px] h-[270px] group relative flex flex-col shadow-2xl overflow-hidden"
+      className="w-[350px] h-[220px] group relative flex flex-col shadow-2xl overflow-hidden"
     >
       <img
         src={image}
         alt="image"
-        className="w-full h-full transform hover:scale-[120%] transition-transform duration-300 cursor-pointer"
+        className="transform hover:scale-[120%] transition-transform duration-300 cursor-pointer"
       />
       <div className="w-full p-2 absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-between text-gray-200 bg-black/60 ">
         <div className="flex flex-col gap-3">
@@ -39,7 +42,7 @@ const ProjectCard = ({ data }) => {
           </a>
         </div>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 
