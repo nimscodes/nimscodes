@@ -5,18 +5,22 @@ const icons = [
   {
     label: 'github',
     icon: <FaGithub />,
+    link: 'https://github.com/nimscodes'
   },
   {
     label: 'linkedin',
     icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/panimako/"
   },
   {
     label: 'instagram',
     icon: <FaInstagram />,
+    link: "https://instagram.com/nims_prince"
   },
   {
     label: 'twitter',
     icon: <FaTwitter />,
+    link: "https://twitter.com/hexaboy07"
   },
 ];
 
@@ -26,7 +30,7 @@ const renderedIcons = icons.map((icon) => {
       whileHover={{ scale: 1.2 }}
       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
       key={icon.label}
-      href="https://github.com/nimscodes"
+      href={icon.link}
       target="_blank"
       rel="noopener noreferrer"
     >
