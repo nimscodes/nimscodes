@@ -1,5 +1,6 @@
 import LeftHero from './LeftHero';
 import RightHero from './RightHero';
+import PropTypes from 'prop-types'
 
 const Hero = ({ isMobile }) => {
   return (
@@ -9,5 +10,9 @@ const Hero = ({ isMobile }) => {
     </div>
   );
 };
+
+Hero.propTypes = { 
+  isMobile: PropTypes.bool.isRequired,
+}
 
 export default Hero;

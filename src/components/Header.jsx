@@ -3,6 +3,7 @@ import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
 import ModeSwitcher from './ModeSwitcher';
 import ContactMe from './ContactMe';
+import PropTypes from 'prop-types'
 
 const Header = ({ darkMode, onToggleMode, isMobile }) => {
   return (
@@ -18,5 +19,11 @@ const Header = ({ darkMode, onToggleMode, isMobile }) => {
     </div>
   );
 };
+
+Header.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  onToggleMode: PropTypes.func.isRequired,
+  isMobile: PropTypes.bool.isRequired,
+}
 
 export default Header;

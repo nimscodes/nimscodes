@@ -1,10 +1,12 @@
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { motion } from 'framer-motion'
+import PropTypes from 'prop-types'
 
 const ProjectCard = ({ data }) => {
+  const { name, image, live, github, tags } = data
 
-  const renderedTags = data.tags.map((tag, index) => {
+  const renderedTags = tags.map((tag, index) => {
     return (
       <span className="mr-2 text-sm" key={index}>
         <span className="text-gold-metallic">#</span>
@@ -19,20 +21,20 @@ const ProjectCard = ({ data }) => {
       className="w-full md:w-[350px] h-[270px] group relative flex flex-col shadow-2xl overflow-hidden"
     >
       <img
-        src={data.image}
+        src={image}
         alt="image"
         className="w-full h-full transform hover:scale-[120%] transition-transform duration-300 cursor-pointer"
       />
       <div className="w-full p-2 absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-between text-gray-200 bg-black/60 ">
         <div className="flex flex-col gap-3">
-          <h1 className="text-lg font-semi-bold">{data.name}</h1>
+          <h1 className="text-lg font-semi-bold">{name}</h1>
           <div className="flex flex-wrap items-center">{renderedTags}</div>
         </div>
         <div className="text-tea-rose-red flex text-xl gap-2">
-          <a href={data.github} target="_blank" rel="noreferrer">
+          <a href={github} target="_blank" rel="noreferrer">
             <FiGithub />
           </a>
-          <a href={data.live} target="_blank" rel="noreferrer">
+          <a href={live} target="_blank" rel="noreferrer">
             <HiOutlineExternalLink />
           </a>
         </div>
@@ -40,5 +42,9 @@ const ProjectCard = ({ data }) => {
     </motion.div>
   );
 };
+
+ProjectCard.propTypes = {
+  data: PropTypes.object.isRequired
+}
 
 export default ProjectCard;

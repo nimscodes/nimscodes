@@ -1,4 +1,5 @@
 import {IoSunnyOutline,IoMoonOutline} from 'react-icons/io5'
+import PropTypes from 'prop-types'
 
 const ModeSwitcher = ({ darkMode, onToggleMode }) => {
   return (
@@ -8,6 +9,11 @@ const ModeSwitcher = ({ darkMode, onToggleMode }) => {
       } 
     </div>
   )
+}
+
+ModeSwitcher.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  onToggleMode: PropTypes.func.isRequired
 }
 
 export default ModeSwitcher

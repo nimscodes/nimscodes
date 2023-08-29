@@ -1,6 +1,7 @@
 import desktopProf from '../assets/my-profile.png';
 import mobileProf from '../assets/my-profile-mobile.png';
 import { motion } from 'framer-motion'
+import PropTypes from 'prop-types'
 
 const RightHero = ({ isMobile }) => {
   return (
@@ -21,5 +22,9 @@ const RightHero = ({ isMobile }) => {
     </motion.div>
   );
 };
+
+RightHero.propTypes = {
+  isMobile: PropTypes.bool.isRequired
+}
 
 export default RightHero;
