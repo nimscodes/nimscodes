@@ -52,7 +52,7 @@ const Skills = () => {
   });
 
   return (
-    <div className="text-gray-400 w-full flex flex-row flex-wrap items-center p-4 md:p-[50px] justify-between border-t border-gray-200 dark:border-gray-700">
+    <div className="text-gray-400 w-full flex flex-row flex-wrap items-center p-4 md:p-[50px] justify-between">
       {renderedIcons}
     </div>
   );

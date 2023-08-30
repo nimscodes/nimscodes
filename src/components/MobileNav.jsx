@@ -52,7 +52,7 @@ const MobileNav = () => {
   return (
     <motion.div className={`relative z-40`}>
       <button
-        className="fixed z-50 top-6 right-5 focus:outline-none text-3xl"
+        className="fixed z-50 top-5 right-5 focus:outline-none text-3xl"
         onClick={toggleMenu}
       >
         {isMenuOpen ? <IoClose /> : <HiMenuAlt3 />}
