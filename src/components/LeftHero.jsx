@@ -8,17 +8,17 @@ const LeftHero = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.5 }}
-      className="relative md:w-[48%] flex flex-col justify-end gap-5 md:gap-4 mb-5"
+      className="relative w-full h-screen flex flex-col justify-center gap-5"
     >
-      <div className="absolute w-60 h-60 transform rotate-45 shadow-2xl md:top-[75%] md:left-[40%] top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 "></div>
-      <span className="text-xs md:text-md text-gray-500">— HI, MY NAME IS</span>
-      <span className="font-semibold text-2xl md:text-3xl">
-        Prince Andrews <span className="text-gold-metallic">Nimako</span>
+      <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] transform rotate-45 shadow-2xl top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 "></div>
+      <span className="text-sm md:text-md py-2 text-gold-metallic">— HI, MY NAME IS</span>
+      <span className="dark:text-gray-300 font-bold text-2xl sm:text-4xl md:text-5xl lg:text-7xl tracking-tighter">
+        Prince Andrews <span className="text-gold-metallic">Nimako</span>,
       </span>
-      <span className="text-2xl md:text-3xl text-gray-500">
-        a Frontend Web Developer
+      <span className="font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl text-gray-400">
+        a Frontend Web Developer.
       </span>
-      <p className="mt-4 w-[95%] md:w-[90%]">
+      <p className="w-[95%] sm:w-[70%] md:w-[50%] mt-5">
         Based in the UK, I am a front-end developer passionate about building
         accessible web apps that users love.
       </p>

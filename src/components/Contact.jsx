@@ -9,14 +9,14 @@ const Contact = () => {
 
 
   return (
-    <div id='contact' className="flex flex-col py-10 gap-10">
+    <div id='contact' className="h-full justify-center flex flex-col gap-10 py-10 ">
       <div className="flex flex-col space-y-3">
-        <h3 className="text-xs text-gray-500 py-2">— LET{"'"}S CHAT</h3>
-        <h1 className="text-4xl font-semibold">Contact </h1>
+        <h3 className="text-sm md:text-md py-2 text-gold-metallic">— LET{"'"}S CHAT</h3>
+        <h1 className="text-3xl md:tet-5xl font-semibold tracking-tighter dark:text-gray-300">Contact </h1>
       </div>
       <div className="flex flex-col md:flex-row gap-20  justify-between">
-        <div className='flex flex-col gap-3 flex-1 md:py-3 dark:text-gray-400'>
-          <p className="mr-5 ">
+        <div className='flex flex-col gap-3 flex-1 md:py-3'>
+          <p className="md:w-[80%]">
             I{"'"}m interested in freelance opportunities. However, if you have
             other request or question, don{"'"}t hesitate to contact me.
           </p>

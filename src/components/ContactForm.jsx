@@ -83,7 +83,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleInputChange}
           placeholder={errors.name || `Enter your name...`}
-          className={`w-full bg-transparent outline-none border-none${
+          className={`w-full bg-transparent outline-none border-none dark:placeholder:text-gray-400 placeholder:text-gun-metal${
             errors.name && ' placeholder:text-red-400'
           }`}
         />
@@ -95,19 +95,19 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleInputChange}
           placeholder={errors.email || `Enter your email...`}
-          className={`w-full bg-transparent border-none outline-none ${
+          className={`w-full bg-transparent border-none outline-none dark:placeholder:text-gray-400 placeholder:text-gun-metal${
             errors.email && ' placeholder:text-red-400'
           }`}
         />
       </div>
-      <div className="flex h-[120px] items-start p-3 shadow-inner border dark:border-gray-700">
+      <div className="flex h-[150px] items-start p-3 shadow-inner border dark:border-gray-700">
         <input
           type="text"
           name="message"
           value={formData.message}
           onChange={handleInputChange}
           placeholder={errors.message || `Type your message...`}
-          className={`w-full bg-transparent outline-none border-none ${
+          className={`w-full bg-transparent outline-none border-none dark:placeholder:text-gray-400 placeholder:text-gun-metal ${
             errors.message && ' placeholder:text-red-400'
           }`}
         />
@@ -121,7 +121,7 @@ const ContactForm = () => {
           type="submit"
           name="send"
           value="SEND"
-          className="w-full bg-transparent outline-none font-semibold"
+          className="w-full bg-transparent outline-none"
         />
         <BsSendCheck size={25} className="text-tea-rose-red" />
       </motion.div>

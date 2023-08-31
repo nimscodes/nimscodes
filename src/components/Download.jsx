@@ -9,7 +9,7 @@ const Download = () => {
       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
       href={resumeFilePath}
       download="resume1.pdf"
-      className="cursor-pointer flex items-center justify-center px-4 py-3 gap-2 border-b shadow-xl border-gun-metal "
+      className="cursor-pointer flex items-center justify-center py-3 px-6 gap-2 border-b shadow-xl border-gun-metal "
     >
       <span>Download Resume</span>
       <FaDownload size={15} className="text-tea-rose-red" />

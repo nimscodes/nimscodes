@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="flex flex-col font-space-mono w-full min-h-screen bg-gray-100 dark:bg-gun-metal text-gun-metal dark:text-gray-100">
+      <div className="flex flex-col font-space-mono w-full min-h-screen bg-gray-100 dark:bg-gun-metal text-gun-metal dark:text-gray-400">
         <Header
           darkMode={darkMode}
           onToggleMode={onToggleMode}

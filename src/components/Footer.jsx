@@ -3,12 +3,12 @@ import SocialIcons from './SocialIcons';
 
 const Footer = () => {
   return (
-    <div className="static w-full bottom-0 z-50 bg-gray-100 dark:bg-gun-metal border-t border-gray-200 dark:border-gray-700">
-      <div className="sm:w-[90%] mx-auto p-5 md:py-0 pb-2 flex flex-col ">
-        <div className="flex flex-col gap-3 md:flex-row md:justify-between">
-          <div className="flex flex-col gap-5">
+    <div className="static w-full bottom-0 z-50 bg-gray-100 dark:text-gray-300 dark:bg-gun-metal border-t border-gray-200 dark:border-gray-700 mt-20">
+      <div className="p-5 md:p-10 pb-2 flex flex-col ">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between">
+          <div className="flex flex-col gap-2">
             <Logo />
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-gray-500">
               Frontend Web Developer and Aspiring Full Stack Developer
             </p>
           </div>

@@ -13,9 +13,9 @@ const ContactMe = ({ ...rest }) => {
       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
       whileTap={{ scale: 0.9 }}
       href={mailtoLink}
-      className=" bg-gold-metallic font-semibold px-4 py-3 shadow-xl mx-1 text-black flex items-center justify-center gap-1 cursor-pointer"
+      className=" bg-gold-metallic text-gray-800 py-3 px-6 shadow-xl mx-1 flex items-center justify-center gap-1 cursor-pointer"
     >
-      <span className="text-sm">Contact Me!</span>
+      <span>Contact Me!</span>
       <MdOutlineMailOutline size={20} />
     </motion.a>
   );

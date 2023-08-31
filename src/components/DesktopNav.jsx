@@ -11,17 +11,17 @@ const DesktopNav = () => {
     {
       label: 'Home',
       path: '/',
-      icon: <HiOutlineHome size={40} className="text-gray-400" />,
+      icon: <HiOutlineHome size={30} className="text-gray-400" />,
     },
     {
       label: 'About',
-      path: '/about',
-      icon: <BsPerson size={40} className="text-gray-400" />,
+      path: '#about',
+      icon: <BsPerson size={30} className="text-gray-400" />,
     },
     {
       label: 'Work',
-      path: '/work',
-      icon: <MdOutlineWorkOutline size={40} className="text-gray-400" />,
+      path: '#work',
+      icon: <MdOutlineWorkOutline size={30} className="text-gray-400" />,
     },
   ];
 
@@ -34,22 +34,22 @@ const DesktopNav = () => {
         transition={{ type: 'spring', stiffness: 400, damping: 10 }}
         key={link.label}
       >
-        <Link
-          to={link.path}
+        <a
+          href={link.path}
           className={`${
             location.pathname === link.path && active
           } flex flex-col items-center cursor-pointer p-2 hover:border-b-2`}
         >
           {link.icon}
-          <span className="text-xs">{link.label}</span>
-        </Link>
+          <span>{link.label}</span>
+        </a>
       </motion.li>
     );
   });
 
   return (
-    <div className="flex items-center shadow-inner px-5 py-2">
-      <ul className="flex gap-5 ">{renderedLinks}</ul>
+    <div className="flex items-center px-5 py-2">
+      <ul className="flex gap-5 md:gap-10 ">{renderedLinks}</ul>
     </div>
   );
 };

@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 
 const Header = ({ darkMode, onToggleMode, isMobile }) => {
   return (
-    <div className='sticky top-0 z-50 bg-gray-100 dark:bg-gun-metal shadow'>
-      <div className="sm:w-[90%] mx-auto p-5 md:py-0 flex items-center justify-between ">
+    <div className='sticky top-0 z-50 bg-gray-100 dark:bg-gun-metal shadow dark:text-gray-300'>
+      <div className="p-5 md:px-10 md:py-0 flex items-center justify-between ">
         <Logo />
         <div className="order-2 md:order-2">
           {isMobile ? <MobileNav /> : <DesktopNav />}
