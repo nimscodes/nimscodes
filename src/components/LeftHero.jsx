@@ -10,7 +10,7 @@ const LeftHero = () => {
       transition={{ duration: 1.5 }}
       className="relative w-full h-screen flex flex-col justify-center gap-5"
     >
-      <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] transform rotate-45 shadow-2xl top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 "></div>
+      <div className="absolute w-[200px] h-[200px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] transform rotate-45 shadow-2xl top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 "></div>
       <span className="text-sm md:text-md text-gold-metallic">— HI, MY NAME IS</span>
       <span className="dark:text-gray-300 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter">
         Prince Andrews <span className="text-gold-metallic">Nimako</span>,
