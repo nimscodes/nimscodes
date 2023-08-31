@@ -46,22 +46,25 @@ const ContactForm = () => {
 
     setErrors(newErrors);
 
-    try {
-      const response = await emailjs.send(
-        serviceId,
-        templateId,
-        formData,
-        userId
-      );
-
-      if (response.status === 200) {
-        console.log('Message sent successfully');
-        setSuccess('Message sent successfully');
-        // Display confirmation to the user
+    if (!Object.values(newErrors).some((error) => error)){
+      try {
+        const response = await emailjs.send(
+          serviceId,
+          templateId,
+          formData,
+          userId
+        );
+  
+        if (response.status === 200) {
+          console.log('Message sent successfully');
+          setSuccess('Message sent successfully');
+          // Display confirmation to the user
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
       }
-    } catch (error) {
-      console.error('Error sending message:', error);
     }
+
 
     setFormData({
       name: '',
@@ -84,7 +87,7 @@ const ContactForm = () => {
           onChange={handleInputChange}
           placeholder={errors.name || `Enter your name...`}
           className={`w-full bg-transparent outline-none border-none dark:placeholder:text-gray-400 placeholder:text-gun-metal${
-            errors.name && ' placeholder:text-red-400'
+            errors.name && ' placeholder:text-red-400 dark:placeholder:text-red-400'
           }`}
         />
       </div>
@@ -96,7 +99,7 @@ const ContactForm = () => {
           onChange={handleInputChange}
           placeholder={errors.email || `Enter your email...`}
           className={`w-full bg-transparent border-none outline-none dark:placeholder:text-gray-400 placeholder:text-gun-metal${
-            errors.email && ' placeholder:text-red-400'
+            errors.email && ' placeholder:text-red-400 dark:placeholder:text-red-400'
           }`}
         />
       </div>
@@ -108,7 +111,7 @@ const ContactForm = () => {
           onChange={handleInputChange}
           placeholder={errors.message || `Type your message...`}
           className={`w-full bg-transparent outline-none border-none dark:placeholder:text-gray-400 placeholder:text-gun-metal ${
-            errors.message && ' placeholder:text-red-400'
+            errors.message && ' placeholder:text-red-400 dark:placeholder:text-red-400'
           }`}
         />
       </div>

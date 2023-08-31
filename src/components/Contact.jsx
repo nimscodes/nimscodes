@@ -12,7 +12,7 @@ const Contact = () => {
     <div id='contact' className="h-full justify-center flex flex-col gap-10 py-10 ">
       <div className="flex flex-col space-y-3">
         <h3 className="text-sm md:text-md py-2 text-gold-metallic">— LET{"'"}S CHAT</h3>
-        <h1 className="text-3xl md:tet-5xl font-semibold tracking-tighter dark:text-gray-300">Contact </h1>
+        <h1 className="text-3xl md:text-5xl font-semibold tracking-tighter dark:text-gray-300">Contact </h1>
       </div>
       <div className="flex flex-col md:flex-row gap-20  justify-between">
         <div className='flex flex-col gap-3 flex-1 md:py-3'>
