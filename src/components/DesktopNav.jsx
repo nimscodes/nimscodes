@@ -1,11 +1,11 @@
 import { HiOutlineHome } from 'react-icons/hi';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineWorkOutline } from 'react-icons/md';
-import { Link, useLocation } from 'react-router-dom';
+// import {  useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const DesktopNav = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
   const links = [
     {
