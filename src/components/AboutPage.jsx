@@ -9,7 +9,7 @@ const AboutPage = () => {
     },
     {
       label: 'frameworks/libraries',
-      list: ['React', 'Redux', 'Tailwind CSS', 'NodeJS', 'ExpressJS, Mongoose'],
+      list: ['React', 'Redux', 'Tailwind CSS', 'NodeJS', 'ExpressJS', 'Mongoose'],
     },
 
     { label: 'database', list: ['MongoDB', 'PostgreSQL'] },
@@ -24,7 +24,7 @@ const AboutPage = () => {
       ],
     },
     {
-      label: 'SDLC',
+      label: 'sdlc',
       list: ['Agile', 'Git and GitHub', 'Mocha', 'Chai', 'Jest'],
     },
   ];
