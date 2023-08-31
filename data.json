@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Rest Countries App",
-    "description": "This apllication allows users to explore information about different countries. It utilizes React state management, routing, search and filter functionality and tailwind css for styling.",
+    "description": "This apllication allows users to explore information about different countries.",
     "live": "https://countries-app-flax-chi.vercel.app/",
     "github": "https://github.com/nimscodes/countries-app",
     "image": "./images/rest.png",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Todo App",
-    "description": "An interactive application built with React and Tailwind CSS that allows users to manage their daily tasks efficiently.",
+    "description": "An interactive application that allows users to manage their daily tasks efficiently.",
     "live": "https://nimscodes.github.io/todo-main/",
     "github": "https://github.com/nimscodes/todo-main",
     "image": "./images/todo.png",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Job Listings App",
-    "description": "A responsive and interactive web application that aims to filter job listings when the user clicks on the job tags.",
+    "description": "This application that aims to filter job listings when the user clicks on the job tags.",
     "live": "https://job-lisiting-app.vercel.app/",
     "github": "https://github.com/nimscodes/job-lisiting-app",
     "image": "./images/jobs.png",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Navigation Dropdown",
-    "description": "This application aims to provide an optimal user experience by catering to different device screen sizes, providing responsive navigation with dropdown menus, and offering interactive elements with hover states.",
+    "description": "This application aims to provide an optimal user experience with reponsive navigation and dropdown menus.",
     "live": "https://navigation-dropdown.vercel.app/",
     "github": "https://github.com/nimscodes/navigation-dropdown",
     "image": "./images/navigation-dropdwon.png",
