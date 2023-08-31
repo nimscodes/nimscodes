@@ -1,8 +1,8 @@
 import LeftHero from './LeftHero';
 // import RightHero from './RightHero';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
-const Hero = ({ isMobile }) => {
+const Hero = () => {
   return (
     <div id='home' className="flex flex-col md:flex-row justify-between">
       <LeftHero />
@@ -11,8 +11,8 @@ const Hero = ({ isMobile }) => {
   );
 };
 
-Hero.propTypes = { 
-  isMobile: PropTypes.bool.isRequired,
-}
+// Hero.propTypes = { 
+//   isMobile: PropTypes.bool.isRequired,
+// }
 
 export default Hero;

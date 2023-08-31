@@ -26,7 +26,7 @@ const Projects = () => {
         </a>
       </div>
 
-      <motion.div className="flex  gap-10 flex-wrap">{renderedProjects}</motion.div>
+      <motion.div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-10">{renderedProjects}</motion.div>
     </div>
   );
 };
