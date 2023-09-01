@@ -78,7 +78,8 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-5">
+    <div className='flex-1'>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div className="flex items-center p-3 shadow-inner border dark:border-gray-700">
         <input
           type="text"
@@ -130,6 +131,8 @@ const ContactForm = () => {
       </motion.div>
       {success && <p className="text-[#5cb85c]"> {success}</p>}
     </form>
+    </div>
+    
   );
 };
 

@@ -1,16 +1,17 @@
 import { HiOutlineHome } from 'react-icons/hi';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineWorkOutline } from 'react-icons/md';
-// import {  useLocation } from 'react-router-dom';
+// import { MdOutlineMailOutline } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types'
 
-const DesktopNav = () => {
-  // const location = useLocation();
+const DesktopNav = ({ activeNavItem }) => {
+
 
   const links = [
     {
       label: 'Home',
-      path: '/',
+      path: '#home',
       icon: <HiOutlineHome size={30} className="text-gray-400" />,
     },
     {
@@ -23,6 +24,11 @@ const DesktopNav = () => {
       path: '#work',
       icon: <MdOutlineWorkOutline size={30} className="text-gray-400" />,
     },
+    // {
+    //   label: 'Contact',
+    //   path: '#contact',
+    //   icon: <MdOutlineMailOutline size={30} className="text-gray-400" />,
+    // },
   ];
 
   const active = 'border-b-2 border-tea-rose-red';
@@ -37,7 +43,7 @@ const DesktopNav = () => {
         <a
           href={link.path}
           className={`${
-            location.pathname === link.path && active
+            activeNavItem === link.label.toLowerCase() && active
           } flex flex-col items-center cursor-pointer p-2 hover:border-b-2`}
         >
           {link.icon}
@@ -53,5 +59,9 @@ const DesktopNav = () => {
     </div>
   );
 };
+
+DesktopNav.propTypes = {
+  activeNavItem: PropTypes.string.isRequired
+}
 
 export default DesktopNav;

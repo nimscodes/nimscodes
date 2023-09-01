@@ -52,7 +52,8 @@ const AboutPage = () => {
   });
 
   return (
-    <div id="about" className="h-full py-10 flex flex-col gap-20 ">
+    <div id="about" className='section'>
+      <div  className="h-full py-10 flex flex-col gap-20 ">
       <div className="flex h-full flex-col md:flex-row justify-between">
         <div className="w-full flex-1  md:w-[50%] flex flex-col justify-end gap-5">
           {/* <div className="absolute w-60 h-60 transform rotate-45 shadow-2xl md:top-[75%] md:left-[40%] top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 "></div> */}
@@ -110,6 +111,8 @@ const AboutPage = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

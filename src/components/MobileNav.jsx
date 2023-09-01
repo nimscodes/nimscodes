@@ -4,7 +4,6 @@ import { IoClose } from 'react-icons/io5';
 import { HiOutlineHome } from 'react-icons/hi';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineWorkOutline } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 import ContactMe from './ContactMe';
 import SocialIcons from './SocialIcons';
 import { motion } from 'framer-motion'
@@ -23,17 +22,17 @@ const MobileNav = () => {
   const links = [
     {
       label: 'Home',
-      path: '/',
+      path: '#home',
       icon: <HiOutlineHome size={25} className="text-tea-rose-red" />,
     },
     {
       label: 'About',
-      path: '/about',
+      path: '#about',
       icon: <BsPerson size={25} className="text-tea-rose-red" />,
     },
     {
       label: 'Work',
-      path: '/work',
+      path: '#work',
       icon: <MdOutlineWorkOutline size={25} className="text-tea-rose-red" />,
     },
   ];
@@ -41,10 +40,10 @@ const MobileNav = () => {
   const renderedLinks = links.map((link) => {
     return (
       <li key={link.label}>
-        <Link to={link.path} onClick={handleClick} className="flex items-center gap-3 cursor-pointer">
+        <a href={link.path} onClick={handleClick} className="flex items-center gap-3 cursor-pointer">
           {link.icon}
           <span className="text-sm">{link.label}</span>
-        </Link>
+        </a>
       </li>
     );
   });
