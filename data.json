@@ -34,6 +34,25 @@
     "github": "https://github.com/nimscodes/navigation-dropdown",
     "image": "./images/navigation-dropdwon.png",
     "tags": ["react", "navigation", "tailwind", "dropdown"]
+  },
+  {
+    "id": 5,
+    "name": "GPT-3",
+    "description": "This project was created by translating a Figma design into a dynamic, responsive website that adapts to varying screen sizes.",
+    "live": "https://gpt3-liart.vercel.app/",
+    "github": "https://github.com/nimscodes/gpt3",
+    "image": "./images/gpt3.png",
+    "tags": ["react", "tailwind", "mobile-navigation", "responsive", "figma"]
+  },
+
+  {
+    "id": 6,
+    "name": "Workourt App",
+    "description": "This application provide users with a comprehensive, real-time overview of various workouts and exercises.",
+    "live": "https://github.com/nimscodes/gpt3/",
+    "github": "https://github.com/nimscodes/workout_app",
+    "image": "./images/gym1.png",
+    "tags": ["react", "material-ui", "search", "filter", "exercisedb-api"]
   }
   
 ]
