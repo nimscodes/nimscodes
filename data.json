@@ -47,7 +47,7 @@
 
   {
     "id": 6,
-    "name": "Workourt App",
+    "name": "Fitness App",
     "description": "This application provide users with a comprehensive, real-time overview of various workouts and exercises.",
     "live": "https://github.com/nimscodes/gpt3/",
     "github": "https://github.com/nimscodes/workout_app",
