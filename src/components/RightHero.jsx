@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 
 const RightHero = ({ isMobile }) => {
   return (
-    <motion.div className="flex md:w-[40%]">
-      <div className="relative z-0 w-full h-full flex items-center justify-center md:justify-end">
+    <motion.div className="flex self-center md:w-[35%] shadow-md">
+      <div className="relative z-0 w-full h-full flex items-center justify-center">
         <div className="absolute w-20 h-40 transform rotate-45 shadow-inner top-[20%] left-0"></div>
         <div className="absolute w-20 h-40 transform rotate-45 shadow-xl top-[35%] left-0"></div>
         <div className="absolute w-20 h-40 transform rotate-45 shadow-inner top-[55%] left-0"></div>
@@ -16,7 +16,7 @@ const RightHero = ({ isMobile }) => {
         <img
           src={isMobile ? mobileProf : desktopProf}
           alt="profile"
-          className="w-[80%] z-10 border-b border-gold-metallic"
+          className="w-[50%] md:w-[70%] z-10 border-b border-gold-metallic object-cover"
         />
       </div>
     </motion.div>

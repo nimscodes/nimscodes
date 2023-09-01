@@ -34,8 +34,8 @@ const ProjectCard = ({ data }) => {
       <div className="absolute bottom-0 flex flex-col gap-3 w-full shadow-inner opacity-90 bg-gun-metal p-2">
         <div className="flex flex-col gap-3">
           <h1 className="font-semibold text-gold-metallic">{name}</h1>
-          <p className='hidden md:flex'>{description}</p>
-          <div className="sm:hidden flex flex-wrap items-center">{renderedTags}</div>
+          <p className='hidden md:flex text-sm'>{description}</p>
+          <div className="md:hidden flex flex-wrap items-center">{renderedTags}</div>
         </div>
         <div className="text-tea-rose-red sm:flex gap-2 sm:text-xl hidden">
           <a href={github} target="_blank" rel="noreferrer">
