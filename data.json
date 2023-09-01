@@ -38,7 +38,7 @@
   {
     "id": 5,
     "name": "GPT-3",
-    "description": "This project was created by translating a Figma design into a dynamic, responsive website that adapts to varying screen sizes.",
+    "description": "This project was created by translating a Figma design into a dynamic, responsive website.",
     "live": "https://gpt3-liart.vercel.app/",
     "github": "https://github.com/nimscodes/gpt3",
     "image": "./images/gpt3.png",

@@ -31,7 +31,7 @@ const ProjectCard = ({ data }) => {
         />
       </div>
 
-      <div className="absolute bottom-0 flex flex-col gap-3 w-full shadow-inner opacity-90 bg-gun-metal p-2">
+      <div className="absolute bottom-0 flex flex-col gap-3 w-full shadow-inner opacity-80 bg-gun-metal p-2">
         <div className="flex flex-col gap-3">
           <h1 className="font-semibold text-gold-metallic">{name}</h1>
           <p className='hidden md:flex text-sm'>{description}</p>
