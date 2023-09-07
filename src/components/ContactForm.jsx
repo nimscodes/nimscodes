@@ -1,138 +1,107 @@
-import { useState } from 'react';
-import { BsSendCheck } from 'react-icons/bs';
-import emailjs from 'emailjs-com';
-import { motion } from 'framer-motion';
+import { BsSendCheck } from "react-icons/bs";
+import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [success, setSuccess] = useState('');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
+  } = useForm();
 
   const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
   const userId = import.meta.env.VITE_EMAIL_USER_ID;
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const newErrors = {
-      name: formData.name ? '' : 'Name is required',
-      email: validateEmail(formData.email) ? '' : 'Invalid email',
-      message: formData.message ? '' : 'Message is required',
-    };
-
-    setErrors(newErrors);
-
-    if (!Object.values(newErrors).some((error) => error)){
-      try {
-        const response = await emailjs.send(
-          serviceId,
-          templateId,
-          formData,
-          userId
-        );
-  
-        if (response.status === 200) {
-          console.log('Message sent successfully');
-          setSuccess('Message sent successfully');
-          // Display confirmation to the user
-        }
-      } catch (error) {
-        console.error('Error sending message:', error);
-      }
+  const onSubmit = async (data) => {
+    console.log(data);
+    try {
+      const response = await emailjs.send(serviceId, templateId, data, userId);
+      console.log(response);
+    } catch (error) {
+      console.error("Error sending message:", error);
     }
-
-
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
-
-    // if (!Object.values(newErrors).some((error) => error)) {
-    //   setSuccess('Message sent successfully');
-    // }
   };
+
+  const fieldStyles = "flex flex-col mb-3";
+
 
   return (
-    <div className='flex-1'>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-      <div className="flex items-center p-3 shadow-inner border dark:border-gray-700">
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          placeholder={errors.name || `Enter your name...`}
-          className={`w-full bg-transparent outline-none border-none dark:placeholder:text-gray-400 placeholder:text-gun-metal${
-            errors.name && ' placeholder:text-red-400 dark:placeholder:text-red-400'
-          }`}
-        />
-      </div>
-      <div className="flex items-center p-3 shadow-md border dark:border-gray-700">
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          placeholder={errors.email || `Enter your email...`}
-          className={`w-full bg-transparent border-none outline-none dark:placeholder:text-gray-400 placeholder:text-gun-metal${
-            errors.email && ' placeholder:text-red-400 dark:placeholder:text-red-400'
-          }`}
-        />
-      </div>
-      <div className="flex h-[150px] items-start p-3 shadow-inner border dark:border-gray-700">
-        <input
-          type="text"
-          name="message"
-          value={formData.message}
-          onChange={handleInputChange}
-          placeholder={errors.message || `Type your message...`}
-          className={`w-full bg-transparent outline-none border-none dark:placeholder:text-gray-400 placeholder:text-gun-metal ${
-            errors.message && ' placeholder:text-red-400 dark:placeholder:text-red-400'
-          }`}
-        />
-      </div>
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-        className="cursor-pointer flex items-center gap-1 self-end px-5 py-2 shadow-md border dark:border-gray-700"
-      >
-        <input
-          type="submit"
-          name="send"
-          value="SEND"
-          className="w-full bg-transparent outline-none"
-        />
-        <BsSendCheck size={25} className="text-tea-rose-red" />
-      </motion.div>
-      {success && <p className="text-[#5cb85c]"> {success}</p>}
-    </form>
+    <div className="flex-1">
+      { isSubmitSuccessful && <p className="text-xs text-green-500">Message sent successfully</p> }
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={fieldStyles}>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            {...register("name", {
+              required: "You must enter your name!",
+            })}
+            className={`bg-transparent shadow-md p-2 ${
+              errors.name ? "border-red-500" : ""
+            }`}
+            placeholder="Enter your name..."
+          />
+          {errors.name && (
+            <p role="alert" className="text-xs text-red-500">
+              {errors.name.message}
+            </p>
+          )}
+        </div>
+        <div className={fieldStyles}>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            {...register("email", {
+              required: "You must enter your email!",
+              pattern: {
+                value: /\S@+\S+\.\S+/,
+                message: "Entered value does not match email format",
+              },
+            })}
+            className={`bg-transparent shadow-md p-2 ${
+              errors.email ? "border-red-500" : ""
+            }`}
+            placeholder="Enter your name..."
+          />
+          {errors.email && (
+            <p role="alert" className="text-xs text-red-500">
+              {errors.email.message}
+            </p>
+          )}
+        </div>
+        <div className={fieldStyles}>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            {...register("message", {
+              required: "You must enter your message!",
+            })}
+            className={`bg-transparent shadow-md p-2 h-40 ${
+              errors.message ? "border-red-500" : ""
+            }`}
+            placeholder="Type your message..."
+          />
+          {errors.message && (
+            <p role="alert" className="text-xs text-red-500">
+              {errors.message.message}
+            </p>
+          )}
+        </div>
+        <div>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="flex items-center gap-2 py-2 px-3 border border-gray-400"
+          >
+            Send
+            <BsSendCheck className="text-tea-rose-red" />
+          </button>
+        </div>
+      </form>
     </div>
-    
   );
 };
 
