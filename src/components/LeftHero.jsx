@@ -16,7 +16,7 @@ const LeftHero = () => {
         Prince Andrews <span className="text-gold-metallic">Nimako</span>,
       </span>
       <span className="font-bold text-2xl md:text-4xl lg:text-6xl text-gray-400">
-        a Frontend Web Developer.
+        a Software Developer.
       </span>
       <p className="w-[95%] sm:w-[70%] md:w-[50%] mt-5">
         Based in the US, I am a software developer passionate about building

@@ -80,7 +80,7 @@ const AboutPage = () => {
                 <p>
                   I am a dedicated{' '}
                   <span className="text-gold-metallic">
-                    frontend web developer
+                    software developer
                   </span>{' '}
                   with a wealth of self-taught coding experience backed by a
                   rigorous 16-week intensive coding Bootcamp, driven by a
