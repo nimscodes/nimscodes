@@ -19,7 +19,7 @@ const LeftHero = () => {
         a Frontend Web Developer.
       </span>
       <p className="w-[95%] sm:w-[70%] md:w-[50%] mt-5">
-        Based in the UK, I am a front-end developer passionate about building
+        Based in the US, I am a software developer passionate about building
         accessible web apps that users love.
       </p>
       <div className="flex flex-col md:items-center md:flex-row mt-20 md:mt-10 gap-4">
